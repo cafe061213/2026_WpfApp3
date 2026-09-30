@@ -1,0 +1,70 @@
+﻿<Window x:Class="_2026_WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2026_WpfApp2"
+        mc:Ignorable="d"
+        Title="WPF飲料訂購ver1" Height="471" Width="832">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="309"/>
+            <RowDefinition Height="Auto" MinHeight="91"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#FFF9F5F5">
+            <!-- 紅茶大杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="紅茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyRedLarge" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyRedLarge, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- 紅茶小杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="紅茶小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="40元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyRedSmall" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyRedSmall, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- 綠茶大杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="綠茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyGreenLarge" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyGreenLarge, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- 綠茶小杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="綠茶小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="40元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyGreenSmall" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyGreenSmall, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- 可樂大杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="可樂大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="50元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyColaLarge" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyColaLarge, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- 可樂小杯 -->
+            <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
+                <Label Content="可樂小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
+                <Label Content="30元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                <Slider x:Name="sliderQtyColaSmall" Width="150" Height="26" Margin="60,0,0,0" VerticalAlignment="Center" Minimum="0" Maximum="20" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="{Binding ElementName=sliderQtyColaSmall, Path=Value}" FontSize="14" VerticalContentAlignment="Center" Margin="15,0,0,0" Height="26" Width="40" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Height="60" Width="120" FontSize="16" Click="OrderButton_Click"/>
+        <TextBlock x:Name="SummaryTextBlock" Grid.Row="1" Margin="20,5,20,-46" Grid.ColumnSpan="2" Background="#FFF9FBE3" FontSize="16" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
